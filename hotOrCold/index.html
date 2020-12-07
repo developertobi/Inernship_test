@@ -10,7 +10,10 @@
 <body>
     <h2>Hot or cold game.</h2>
     <label for="guessValue">Enter a guess between 1 - 100:</label><br>
-    <input type="number" name="guessValue" id="myInput" min="0" max="100" minlength="1" maxlength=3><br>
+    <!-- <input type="number" id="myInput" minlength="1"><br> -->
+    <input name="guessValue" type="number" id="myInput" minlength="1"
+    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+    type = "number" maxlength = "3"/> <br>
     <button onclick="getInputValue()" >Submit</button>
 
     <div id="message-here"></div>
